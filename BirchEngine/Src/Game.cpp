@@ -42,11 +42,13 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 		isRunning = true;
 	}
 
+	// setting up player materials and locations 
 	player = new gameObject("assets/playercharacter.png", 0, 0); 
 	enemy = new gameObject("assets/enemy.png", 50, 50);
 	map = new Map();
 
 	newPlayer.addComponent<PositionComponent>(); 
+	newPlayer.getComponent<PositionComponent>().setPos(500, 500); 
 
 }
 

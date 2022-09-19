@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 	Uint32 frameStart;
 	int frameTime;
 
+	// initiating game and resolution, determining the fullscreen
 	game = new Game();
 	game->init("GameWindow", 800, 640, false);
 
@@ -23,6 +24,7 @@ int main(int argc, char *argv[])
 
 		frameTime = SDL_GetTicks() - frameStart; 
 
+		
 		if (frameDelay > frameTime) 
 		{
 			SDL_Delay(frameDelay - frameTime); 

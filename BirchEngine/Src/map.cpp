@@ -3,7 +3,7 @@
 
 int lvl1[20][25] = 
 {
-
+	// this is the map grid 
 	{0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -29,6 +29,7 @@ int lvl1[20][25] =
 
 Map::Map()
 {
+	// loading in the textures for the different fields 
 	dirt = TextureManager::LoadTexture("assets/dirt.png");
 	water = TextureManager::LoadTexture("assets/water.png");
 	grass = TextureManager::LoadTexture("assets/grass.png");
@@ -38,10 +39,10 @@ Map::Map()
 	src.x = 0;
 	src.y = 0; 
 	src.w = 32;
-	src.h = 32; 
+	src.h = 32;
 
-	dest.w = 32; 
-	dest.h = 32; 
+	dest.w = 32;
+	dest.h = 32;
 	dest.x = 0;
 	dest.y = 0; 
 }
@@ -70,6 +71,7 @@ void Map::DrawMap()
 			dest.x = column * 32;
 			dest.y = row * 32; 
 
+			// setting the textures to the different numbers 
 			switch (type)
 			{
 			case 0: 
